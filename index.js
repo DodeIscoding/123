@@ -1,12 +1,16 @@
-var express = require('express')
-var app = express()
-var port = app.listen(process.env.PORT || 5050);
-const mongoose = require("mongoose")
+const express = require('express')
+const app = express()
+const port = 5000
+
 const{ User } = require("./models/User")
 const config = require("./config/key")
 const bodyParser = require("body-parser")
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+
+const mongoose = require("mongoose")
 mongoose.connect(config.mongoURI,{
 }).then(() => console.log("MongoDB Connected.."))
 .catch(err => console.log(err))
@@ -50,6 +54,4 @@ app.post("/register",(req,res) => {
 // })
 
 
-app.listen(port, function() {
-    console.log('start! express server');
-    })
+app.listen(port, () => console.log('Example app listening on port'+ port))
