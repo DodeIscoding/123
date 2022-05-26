@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from "./components/views/LoginPage/LoginPage";
-import NavBer from "./components/views/NavBar/NavBar";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
-import footer from "./components/views/Footer/Footer"
+
+import cctvPage from "./components/views/cctvPage/cctvPage"
+import parkingPage from "./components/views/parking/parking"
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       */}
  <Switch>
           <Route exact path="/LandingPage" component={Auth(LandingPage, null )  } />
-          <Route exact path="/footer" component={Auth(footer, null )  } />
+          <Route exact path="/cctvPage" component={Auth(cctvPage, null )  } />
+          <Route exact path="/parkingPage" component={Auth(parkingPage, null )  } />
           <Route exact path="/LoginPage" component={Auth(LoginPage, false) } />
           <Route exact path="/RegisterPage" component={Auth(RegisterPage, false)} />
         </Switch>

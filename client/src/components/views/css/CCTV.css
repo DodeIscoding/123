@@ -661,7 +661,7 @@
         transition-timing-function: linear;
     }
     /* 상단 상채창 상태 */
-    .mini-wait{
+    .mini-wait1{
         margin: 10px 0px 10px 0px;
         border-radius: 20px;
         height: 30px;
