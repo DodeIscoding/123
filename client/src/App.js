@@ -4,12 +4,17 @@ import LoginPage from "./components/views/LoginPage/LoginPage";
 import NavBer from "./components/views/NavBar/NavBar";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
+import footer from "./components/views/Footer/Footer"
+
 
 function App() {
   return (
     <Router>
     <div>
-      <ul>
+      {/* <ul>
+      <li>
+          <Link to="/footer">Forter</Link>
+        </li>
         <li>
           <Link to="/LandingPage">LandingPage</Link>
         </li>
@@ -19,9 +24,9 @@ function App() {
         <li>
           <Link to="/RegisterPage">RegisterPage</Link>
         </li>
-      </ul>
+      </ul> */}
 
-      <hr />
+      {/* <hr /> */}
 
       {/*
         A <Switch> looks through all its children <Route>
@@ -32,6 +37,7 @@ function App() {
       */}
  <Switch>
           <Route exact path="/LandingPage" component={Auth(LandingPage, null )  } />
+          <Route exact path="/footer" component={Auth(footer, null )  } />
           <Route exact path="/LoginPage" component={Auth(LoginPage, false) } />
           <Route exact path="/RegisterPage" component={Auth(RegisterPage, false)} />
         </Switch>
