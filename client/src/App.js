@@ -3,15 +3,14 @@ import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
-
-import cctvPage from "./components/views/cctvPage/cctvPage"
-import parkingPage from "./components/views/parking/parking"
+import Main from "./components/views/Page/Main"
 
 
 function App() {
   return (
     <Router>
     <div>
+      <Main/>
       {/* <ul>
       <li>
           <Link to="/footer">Forter</Link>
@@ -38,8 +37,6 @@ function App() {
       */}
  <Switch>
           <Route exact path="/LandingPage" component={Auth(LandingPage, null )  } />
-          <Route exact path="/cctvPage" component={Auth(cctvPage, null )  } />
-          <Route exact path="/parkingPage" component={Auth(parkingPage, null )  } />
           <Route exact path="/LoginPage" component={Auth(LoginPage, false) } />
           <Route exact path="/RegisterPage" component={Auth(RegisterPage, false)} />
         </Switch>

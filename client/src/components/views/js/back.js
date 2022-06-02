@@ -1,14 +1,15 @@
+import Sidebar1 from "../html/Sidebar1"
 //홈페이지 이동 막기
 
 // CCTV 전용
 let cctv_img_movearr = new Array();
 for (let i = 0; i <= 6; i++) {
-    cctv_img_movearr.push("img-move" + i);
+    cctv_img_movearr.push("img_move" + i);
 }
 // 주차장 전용
 let parking_img_movearr = new Array();
 for (let i = 1; i <= 6; i++) {
-    parking_img_movearr.push("  -move" + i);
+    parking_img_movearr.push("  _move" + i);
 }
 // 클릭시 자신 빼고 나머지 색상 삭제을 위한 반복문
 // CCTV 전용
@@ -18,7 +19,7 @@ for (let i = 0; i <= 6; i++) {
 }
 let cctv_colorarr1 = new Array();
 for (let i = 0; i <= 6; i++) {
-    cctv_colorarr1.push("cctvon1-" + i);
+    cctv_colorarr1.push("cctvon1_" + i);
 }
 // 주차장 전용
 let parking_colorarr = new Array();
@@ -27,7 +28,7 @@ for (let i = 1; i <= 6; i++) {
 }
 let parking_colorarr1 = new Array();
 for (let i = 1; i <= 6; i++) {
-    parking_colorarr1.push("parking0-" + i);
+    parking_colorarr1.push("parking0_" + i);
 }
 let move_number = 0;
 
@@ -38,219 +39,219 @@ export const cctvon =() => {
     // 클릭시 자신 빼고 나머지 색상 삭제
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move0");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move0");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon0").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-0").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon0").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_0").classList.add("cctv_box_img_js");
 
 }
 export const cctvon1 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move1");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move1");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon1").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-1").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon1").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_1").classList.add("cctv_box_img_js");
 }
 export const cctvon2 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move2");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move2");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon2").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-2").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon2").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_2").classList.add("cctv_box_img_js");
 }
 export const cctvon3 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move3");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move3");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon3").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-3").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon3").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_3").classList.add("cctv_box_img_js");
 }
 export const cctvon4 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move4");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move4");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon4").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-4").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon4").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_4").classList.add("cctv_box_img_js");
 }
 export const cctvon5 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move5");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move5");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon5").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-5").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon5").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_5").classList.add("cctv_box_img_js");
 }
 export const cctvon6 = () =>{
       // 클릭시 자신 빼고 나머지 색상 삭제
       for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr[color_remove]);
-        address.classList.remove("cctv-box-js");
+        address.classList.remove("cctv_box_js");
     }
     for (var color_remove = 0; color_remove <= 6; color_remove++) {
         let address = document.getElementById(cctv_colorarr1[color_remove]);
-        address.classList.remove("cctv-box-img-js");
+        address.classList.remove("cctv_box_img_js");
     }
     // 클릭시 다른 곳에 펼쳐져 있는 지도 삭제
-    let address = document.getElementById("test-box")
+    let address = document.getElementById("test_box")
     for (var img_remove = 0; img_remove <= 6; img_remove++) {
         address.classList.remove(cctv_img_movearr[img_remove]);
     }
     // 클릭시 이 버튼이 위치한 곳에 지도 나옴
-    document.querySelector(".test-box").classList.add("test-display");
-    document.querySelector(".test-box").classList.add("img-move6");
-    document.querySelector(".test-box").classList.remove("test-display");
+    document.querySelector(".test_box").classList.add("test_display");
+    document.querySelector(".test_box").classList.add("img_move6");
+    document.querySelector(".test_box").classList.remove("test_display");
     // 클릭시 색상 변경
-    document.getElementById("cctvon6").classList.add("cctv-box-js");
-    document.getElementById("cctvon1-6").classList.add("cctv-box-img-js");
+    document.getElementById("cctvon6").classList.add("cctv_box_js");
+    document.getElementById("cctvon1_6").classList.add("cctv_box_img_js");
 }
 export const off = () =>{
-    document.querySelector(".map-state").classList.add("off-1");
-    document.querySelector(".on").classList.remove("on-display");
+    document.querySelector(".map_state").classList.add("off_1");
+    document.querySelector(".on").classList.remove("on_display");
 }
 export const on = () => {
-    document.querySelector(".map-state").classList.remove("off-1");
-    document.querySelector(".on").classList.add("on-display");
+    document.querySelector(".map_state").classList.remove("off_1");
+    document.querySelector(".on").classList.add("on_display");
 }
 export const move = () => {
     if(move_number == 0){
-    document.querySelector(".body-but-box").classList.add("go");
-    document.querySelector(".body-but-box").classList.remove("go-2");
-    document.querySelector(".slide-but-img").classList.add("go-img");
-    document.querySelector(".slide-but-img").classList.remove("go-img-1");
+    document.querySelector(".body_but_box").classList.add("go");
+    document.querySelector(".body_but_box").classList.remove("go_2");
+    document.querySelector(".slide_but_img").classList.add("go_img");
+    document.querySelector(".slide_but_img").classList.remove("go_img_1");
     move_number =+ 1;
     } else {
-    document.querySelector(".body-but-box").classList.add("go-2");
-    document.querySelector(".body-but-box").classList.remove("go");
-    document.querySelector(".slide-but-img").classList.add("go-img-1");
-    document.querySelector(".slide-but-img").classList.remove("go-img");
+    document.querySelector(".body_but_box").classList.add("go_2");
+    document.querySelector(".body_but_box").classList.remove("go");
+    document.querySelector(".slide_but_img").classList.add("go_img_1");
+    document.querySelector(".slide_but_img").classList.remove("go_img");
     move_number = 0
     }
 }
 export const search_on1 = () => {
-    document.getElementById("simple-search").classList.add("simple-search")
-    document.getElementById("simple-search").classList.remove("area-search")
+    document.getElementById("simple_search").classList.add("simple_search")
+    document.getElementById("simple_search").classList.remove("area_search")
 
-    document.getElementById("area-search").classList.add("area-search")
-    document.getElementById("area-search").classList.remove("simple-search")
+    document.getElementById("area_search").classList.add("area_search")
+    document.getElementById("area_search").classList.remove("simple_search")
 }
 export const search_on2 = () => {
-    document.getElementById("area-search").classList.add("simple-search")
-    document.getElementById("area-search").classList.remove("area-search")
+    document.getElementById("area_search").classList.add("simple_search")
+    document.getElementById("area_search").classList.remove("area_search")
 
-    document.getElementById("simple-search").classList.add("area-search")
-    document.getElementById("simple-search").classList.remove("simple-search")
+    document.getElementById("simple_search").classList.add("area_search")
+    document.getElementById("simple_search").classList.remove("simple_search")
 }
 export const road_Selection_1 = () => {
-    let x = document.getElementsByClassName("search-text-2")[0];
+    let x = document.getElementsByClassName("search_text_2")[0];
     x.innerText = "고속도로";
 }
 export const road_Selection_2 = () => {
-    let x = document.getElementsByClassName("search-text-2")[0];
+    let x = document.getElementsByClassName("search_text_2")[0];
     x.innerText = "주요도로";
 }
 export const testboxoff = () => {
 // cctv 켜져있는 버튼들 꺼짐
 for (var color_remove = 0; color_remove <= 6; color_remove++) {
     let address = document.getElementById(cctv_colorarr[color_remove]);
-    address.classList.remove("cctv-box-js");
+    address.classList.remove("cctv_box_js");
 }
 for (var color_remove = 0; color_remove <= 6; color_remove++) {
     let address = document.getElementById(cctv_colorarr1[color_remove]);
-    address.classList.remove("cctv-box-img-js");
+    address.classList.remove("cctv_box_img_js");
 }
 // 펼쳐져 있는 지도 X 누를 시 지도 삭제
-document.querySelector(".test-box").classList.add("test-display");
+document.querySelector(".test_box").classList.add("test_display");
 }
