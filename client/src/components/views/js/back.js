@@ -1,4 +1,4 @@
-import Sidebar1 from "../html/Sidebar1"
+
 //홈페이지 이동 막기
 
 // CCTV 전용
@@ -207,16 +207,16 @@ export const on = () => {
 }
 export const move = () => {
     if(move_number == 0){
-    document.querySelector(".body_but_box").classList.add("go");
-    document.querySelector(".body_but_box").classList.remove("go_2");
-    document.querySelector(".slide_but_img").classList.add("go_img");
-    document.querySelector(".slide_but_img").classList.remove("go_img_1");
+    document.getElementById("body_but_box").classList.add("go");
+    document.getElementById("body_but_box").classList.remove("go_1");
+    document.getElementById("slide_but_img").classList.add("go_img");
+    document.getElementById("slide_but_img").classList.remove("go_img_1");
     move_number =+ 1;
     } else {
-    document.querySelector(".body_but_box").classList.add("go_2");
-    document.querySelector(".body_but_box").classList.remove("go");
-    document.querySelector(".slide_but_img").classList.add("go_img_1");
-    document.querySelector(".slide_but_img").classList.remove("go_img");
+    document.getElementById("body_but_box").classList.add("go_1");
+    document.getElementById("body_but_box").classList.remove("go");
+    document.getElementById("slide_but_img").classList.add("go_img_1");
+    document.getElementById("slide_but_img").classList.remove("go_img");
     move_number = 0
     }
 }

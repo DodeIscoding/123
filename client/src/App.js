@@ -4,6 +4,7 @@ import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
 import Main from "./components/views/Page/Main"
+import Communication from "./components/views/Page/Communication"
 
 
 function App() {
@@ -11,21 +12,6 @@ function App() {
     <Router>
     <div>
       <Main/>
-      {/* <ul>
-      <li>
-          <Link to="/footer">Forter</Link>
-        </li>
-        <li>
-          <Link to="/LandingPage">LandingPage</Link>
-        </li>
-        <li>
-          <Link to="/LoginPage">LoginPage</Link>
-        </li>
-        <li>
-          <Link to="/RegisterPage">RegisterPage</Link>
-        </li>
-      </ul> */}
-
       {/* <hr /> */}
 
       {/*
@@ -36,6 +22,7 @@ function App() {
         of them to render at a time
       */}
  <Switch>
+          <Route exact path="/Communication" component={Auth(Communication,null)} />
           <Route exact path="/LandingPage" component={Auth(LandingPage, null )  } />
           <Route exact path="/LoginPage" component={Auth(LoginPage, false) } />
           <Route exact path="/RegisterPage" component={Auth(RegisterPage, false)} />
