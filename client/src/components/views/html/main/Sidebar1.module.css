@@ -184,9 +184,12 @@
 }
 
 .slide_but_img {
-    transition-duration: 1.5s;
     transform: scaleX(-1);
 }
 .slide_button:hover .slide_but_img {
     filter: invert(92%) sepia(7%) saturate(159%) hue-rotate(201deg) brightness(80%) contrast(91%);
+}
+a{
+    text-decoration: none;
+    color: black;
 }

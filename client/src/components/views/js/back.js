@@ -220,20 +220,6 @@ export const move = () => {
     move_number = 0
     }
 }
-export const search_on1 = () => {
-    document.getElementById("simple_search").classList.add("simple_search")
-    document.getElementById("simple_search").classList.remove("area_search")
-
-    document.getElementById("area_search").classList.add("area_search")
-    document.getElementById("area_search").classList.remove("simple_search")
-}
-export const search_on2 = () => {
-    document.getElementById("area_search").classList.add("simple_search")
-    document.getElementById("area_search").classList.remove("area_search")
-
-    document.getElementById("simple_search").classList.add("area_search")
-    document.getElementById("simple_search").classList.remove("simple_search")
-}
 export const road_Selection_1 = () => {
     let x = document.getElementsByClassName("search_text_2")[0];
     x.innerText = "고속도로";
@@ -254,4 +240,30 @@ for (var color_remove = 0; color_remove <= 6; color_remove++) {
 }
 // 펼쳐져 있는 지도 X 누를 시 지도 삭제
 document.querySelector(".test_box").classList.add("test_display");
+}
+var temp;
+export const input = () => {
+    var input = document.getElementById("input").value;
+    temp = input;
+}
+export const output = () => {
+    if (typeof temp == "undefined" || temp == null || temp == "") {
+        alert("도로명 주소를 넣어주세요.");
+        return;
+    }
+    document.getElementById("output").innerText = temp;
+}
+export const search_on1 = () => {
+    document.getElementById("simple_search").classList.add("simple_search1")
+    document.getElementById("simple_search").classList.remove("area_search1")
+
+    document.getElementById("area_search").classList.add("area_search1")
+    document.getElementById("area_search").classList.remove("simple_search1")
+}
+export const search_on2 = () => {
+    document.getElementById("area_search").classList.add("simple_search1")
+    document.getElementById("area_search").classList.remove("area_search1")
+
+    document.getElementById("simple_search").classList.add("area_search1")
+    document.getElementById("simple_search").classList.remove("simple_search1")
 }

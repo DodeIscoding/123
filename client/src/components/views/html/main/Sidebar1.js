@@ -3,6 +3,7 @@ import arrow from "../../pic/arrow.svg"
 import bar1 from "./Sidebar1.module.css"
 import "../../html/move.css"
 import { move } from '../../js/back'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar1() {
     return (
@@ -90,14 +91,14 @@ export default function Sidebar1() {
                         </div>
                         {/* 공지사항 내용 */}
                         <div className={bar1.Contents}>
-                        <a href="/iksan/announcement-1.html">
+                        <Link to="">
                             <div>
                                 <div className={bar1.Contents_box}>
                                     <p className={bar1.Contents_text}>익산시 교통정보센터에서 알립니다. </p>
                                     <p className={bar1.Contents_date}>22-03-12</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                         </div>
                     </div>
                     <div className={bar1.but_box}>

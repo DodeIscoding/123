@@ -5,24 +5,17 @@ import RegisterPage from "./components/views/RegisterPage/RegisterPage";
 import Auth from "./hoc/auth";
 import Main from "./components/views/Page/Main"
 import Communication from "./components/views/Page/Communication"
+import CCTV from "./components/views/Page/CCTV"
 
 
 function App() {
   return (
     <Router>
     <div>
-      <Main/>
-      {/* <hr /> */}
-
-      {/*
-        A <Switch> looks through all its children <Route>
-        elements and renders the first one whose path
-        matches the current URL. Use a <Switch> any time
-        you have multiple routes, but you want only one
-        of them to render at a time
-      */}
  <Switch>
+          <Route exact path="/" component={Auth(Main,null)} />
           <Route exact path="/Communication" component={Auth(Communication,null)} />
+          <Route exact path="/CCTV" component={Auth(CCTV,null)} />
           <Route exact path="/LandingPage" component={Auth(LandingPage, null )  } />
           <Route exact path="/LoginPage" component={Auth(LoginPage, false) } />
           <Route exact path="/RegisterPage" component={Auth(RegisterPage, false)} />

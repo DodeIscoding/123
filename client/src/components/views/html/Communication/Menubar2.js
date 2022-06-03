@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 export default function Menubar2() {
     return (
        <div className='menu_list'>
-           <Link to="/소통정보" className="menu_link">
+           <Link to="/Communication" className="menu_link">
                 <div className='img_1'>
                     <img className="icon_img" src={traffic} style={{width: '25px', height: '25px', marginLeft: '25px'}} />
                     <p className='menu_link_1'>소통정보</p>
