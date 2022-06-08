@@ -169,6 +169,7 @@
     margin-top: 9px;
 }
 .but_box {
+    width: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;

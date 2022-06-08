@@ -2,9 +2,9 @@ import React from 'react'
 import "../../html/move.css"
 import arrow from "../../pic/arrow.svg"
 import bar3 from "./Sidebar3.module.css"
-import { move, } from '../../js/back'
+import { move,search_on1,search_on2,road_Selection_1,road_Selection_2,input,output } from '../../js/back'
 
-export default function Sidebar2() {
+export default function Sidebar3() {
     return (
         <div className={bar3.body_c}>
             <div id="body_but_box" className={bar3.body_but_box}>
@@ -15,27 +15,26 @@ export default function Sidebar2() {
                             <p className={bar3.communication_info}>CCTV</p>
                         </div>
                     </div>
-                    <div className={bar3.search_box}>
                         {/* 검색창 코드들 */}
-                        <div className={bar3.search_box}>
+                        <div id="search_box" className={bar3.search_box}>
                             {/* 검색 선택창 */}
                             <div className={bar3.search_main}>
                                 <div className={bar3.search_menu}>
-                                    <button id="simple_search" onclick={bar3.search_on1} className={bar3.simple_search}>간편검색</button>
-                                    <button id="area_search" onclick={bar3.search_on2} className={bar3.area_search}>지역검색</button>
+                                    <button id="simple_search" onClick={search_on1} className={bar3.simple_search}>간편검색</button>
+                                    <button id="area_search" onClick={search_on2} className={bar3.area_search}>지역검색</button>
                                 </div>
                             </div>
                             <div className={bar3.search_box_1} />
                             {/* 검색창 */}
                             <div className={bar3.search}>
                                 <div className={bar3.search_1}>
-                                    <p className={bar3.search_text}>도로명 <input className={bar3.search_input} type="text" /></p>
+                                <p className={bar3.search_text}>도로명 <input onChange={input} id="input" className={bar3.search_input} type="text" maxLength={16} /></p>
                                     <div className={bar3.road_Selection}>
-                                        <p className={bar3.search_text_2}>주요도로</p>
-                                        <button onclick={bar3.road_Selection_1} className={bar3.road_Selection_1}>고속도로</button>
-                                        <button onclick={bar3.road_Selection_2} className={bar3.road_Selection_2}>주요도로</button>
+                                        <p id="search_text" className={bar3.search_text_2}>주요도로</p>
+                                        <button onClick={road_Selection_1} className={bar3.road_Selection_1}>고속도로</button>
+                                        <button onClick={road_Selection_2} className={bar3.road_Selection_2}>주요도로</button>
                                     </div>
-                                    <button type="button" className={bar3.search_button}>검색</button>
+                                    <button onClick={output} className={bar3.search_button}>검색</button>
                                 </div>
                             </div>
                         </div>
@@ -61,13 +60,12 @@ export default function Sidebar2() {
                             </div>
                         </div>
                     </div>
-                    <div className={bar3.bar3.but_box}>
+                    <div className={bar3.but_box}>
                         <button id={1} className={bar3.slide_button} onClick={move}>
                             <img id="slide_but_img" src={arrow} className={bar3.slide_but_img} />
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

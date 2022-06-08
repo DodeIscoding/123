@@ -2,7 +2,7 @@ import React from 'react'
 import state from "./mini_state2.module.css"
 
 
-export default function mini_state() {
+export default function mini_state2() {
   return (
     <div className={state.mini_state}>
       <div className={state.mini_box}>

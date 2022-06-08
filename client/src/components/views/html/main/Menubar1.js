@@ -11,25 +11,25 @@ export default function Menubar1() {
        <div className='menu_list'>
            <Link to="/Communication" className="menu_link">
                 <div className='img_1'>
-                    <img className="icon_img" src={traffic} style={{width: '25px', height: '25px', marginLeft: '25px'}} />
+                    <img className="icon_img" src={traffic} art="traffic_icon" style={{width: '25px', height: '25px', marginLeft: '25px'}} />
                     <p className='menu_link_1'>소통정보</p>
                 </div>
                 <div className='menu_box1'>
                     <div className='menu_box2'></div> 
                 </div>
            </Link>
-           <Link to="CCTV" className="menu_link">
+           <Link to="/CCTV" className="menu_link">
            <div className='img_1'>
-                    <img className="icon_img" src={cctvimg} style={{width: '25px', height: '25px', marginLeft: '25px'}} />
+                    <img className="icon_img" src={cctvimg} art="cctvimg_icon" style={{width: '25px', height: '25px', marginLeft: '25px'}} />
                     <p className='menu_link_1'>CCTV</p>
                 </div>
                 <div className='menu_box1'>
                     <div className='menu_box2'></div> 
                 </div>
             </Link>
-            <Link to="주차장 정보" className="menu_link">
+            <Link to="/Parking" className="menu_link">
             <div className='img_1'>
-                    <img className="icon_img" src={Parking} style={{width: '25px', height: '25px', marginLeft: '25px'}} />
+                    <img className="icon_img" src={Parking}  art="Parking_icon" style={{width: '25px', height: '25px', marginLeft: '25px'}} />
                     <p className='menu_link_1'>주차장 정보</p>
                 </div>
                 <div className='menu_box1'>
@@ -38,7 +38,7 @@ export default function Menubar1() {
             </Link>
             <Link to="공지사항" className="menu_link">
             <div className='img_1'>
-                    <img className="icon_img" src={message} style={{width: '25px', height: '25px', marginLeft: '25px'}} />
+                    <img className="icon_img" src={message} art="message_icon"  style={{width: '25px', height: '25px', marginLeft: '25px'}} />
                     <p className='menu_link_1'>공지사항</p>
                 </div>
                 <div className='menu_box1'>

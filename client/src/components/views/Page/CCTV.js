@@ -6,7 +6,7 @@ import Mini from "../html/CCTV/mini_state3"
 import React from 'react'
 
 
-export default function Communication() {
+export default function CCTV() {
     return (
         <div>
         <Map></Map>

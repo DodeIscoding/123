@@ -221,11 +221,11 @@ export const move = () => {
     }
 }
 export const road_Selection_1 = () => {
-    let x = document.getElementsByClassName("search_text_2")[0];
+    let x = document.getElementById("search_text");
     x.innerText = "고속도로";
 }
 export const road_Selection_2 = () => {
-    let x = document.getElementsByClassName("search_text_2")[0];
+    let x = document.getElementById("search_text");
     x.innerText = "주요도로";
 }
 export const testboxoff = () => {

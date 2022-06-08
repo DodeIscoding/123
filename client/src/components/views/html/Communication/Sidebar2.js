@@ -3,6 +3,7 @@ import "../../html/move.css"
 import arrow from "../../pic/arrow.svg"
 import bar2 from "./Sidebar2.module.css"
 import { move, input, output, search_on1, search_on2 } from '../../js/back'
+// import {openPostCode} from "../../test/Test"
 
 
 export default function Sidebar2() {
