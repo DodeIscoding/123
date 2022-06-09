@@ -7,7 +7,8 @@ import Main from "./components/views/Page/Main"
 import Communication from "./components/views/Page/Communication"
 import CCTV from "./components/views/Page/CCTV"
 import Parking from "./components/views/Page/Parking"
-import Test from "./components/views/test/Sidebar2"
+
+import MapContainer from "./components/views/html/KakaoMap"
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <Router>
     <div>
        <Switch>
-          <Route exact path="/Test" component={Auth(Test,null)} />
+          <Route exact path="/map" component={Auth(MapContainer,null)} />
           <Route exact path="/" component={Auth(Main,null)} />
           <Route exact path="/Communication" component={Auth(Communication,null)} />
           <Route exact path="/CCTV" component={Auth(CCTV,null)} />

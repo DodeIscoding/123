@@ -75,14 +75,16 @@
 }
 .search_1 {
     background: white;
+    display: flex;
 }
 .search_text {
+    width: 68px;
     margin-left: 30px;
-    margin-top: 0;
+    margin-top: 22px;
     margin-bottom: 0;
 }
 .search_button {
-    width: 300px;
+    width: 200px;
     height: 35px;
     color: white;
     text-align: center;
