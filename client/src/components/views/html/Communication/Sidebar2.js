@@ -3,23 +3,14 @@ import "../../html/move.css"
 import arrow from "../../pic/arrow.svg"
 import bar2 from "./Sidebar2.module.css"
 import { move, input, output, search_on1, search_on2 } from '../../js/back'
-import PopupDom from '../../test/PopupDom';
 import PopupPostCode from '../../test/PopupPostCode';
 
 
-export default function Test(props) {
-    // 팝업창 상태 관리
-    const [isPopupOpen, setIsPopupOpen] = useState(false)
+export default function Sidebar2() {
 
-    // 팝업창 열기
-    const openPostCode = () => {
-        setIsPopupOpen(true)
-    }
-
-    // 팝업창 닫기
-    const closePostCode = () => {
-        setIsPopupOpen(false)
-    }
+    const addressData = () => {
+        console.log(addressData);
+      };
     
     return (
         <div className={bar2.body_c}>
@@ -42,7 +33,7 @@ export default function Test(props) {
                         <div className={bar2.search}>
                             <div className={bar2.search_1}>
                                 <p className={bar2.search_text}>도로명 </p>
-                                <button onClick={openPostCode} className={bar2.search_button}>검색</button>
+                                <button className={bar2.search_button}>검색</button>
                             </div>
                         </div>
                     </div>
@@ -54,19 +45,13 @@ export default function Test(props) {
                             </div>
                             <div className={bar2.total_box}>
                                 <p className={bar2.total}>TOTAL</p>
-                                <p className={bar2.total_number}></p>
+                                <p className={bar2.total_number}>{""}</p>
                                 <p className={bar2.total_gun}>건</p>
                             </div>
                         </div>
                         <div className={bar2.street}>
                             <div id="scroll" className={bar2.scroll}>
-                                <div id='popupDom'>
-                                    {isPopupOpen && (
-                                        <PopupDom>
-                                            <PopupPostCode onClose={closePostCode} />
-                                        </PopupDom>
-                                    )}
-                                </div>
+                                <PopupPostCode addressData={addressData}/>
                             </div>
                         </div>
                     </div>

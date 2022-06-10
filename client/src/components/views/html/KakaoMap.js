@@ -1,12 +1,13 @@
 import React, { useEffect,useState } from 'react';
 import cn from "classnames";
 import "../html/KakaoMap.css";
-import PopupPostCode from "../test/PopupPostCode"
+
 
 
 const { kakao } = window;
 
-const MapContainer = () => {
+const MapContainer = (setAddress) => {
+
   const parentFunction = (x) => {
     console.log(x);
   };
@@ -21,7 +22,7 @@ const MapContainer = () => {
     // 주소-좌표 변환 객체를 생성합니다.
     const geocoder = new kakao.maps.services.Geocoder();
     // 주소로 좌표를 검색합니다..
-    geocoder.addressSearch("안녕동", function (result, status) {
+    geocoder.addressSearch(setAddress.setAddress, function (result, status) {
 
       // 정상적으로 검색이 완료됐으면 
       if (status === kakao.maps.services.Status.OK) {
@@ -36,12 +37,13 @@ const MapContainer = () => {
         // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
         map.setCenter(coords);
       }
+      console.log(setAddress)
     })
-  }, []);
+  }, [setAddress]);
+
   return(
-    <div className={cn("Map")}>
+    <div id="map">
       <div className={cn("MapContainer")} id="myMap">
-      <PopupPostCode parentFunction={parentFunction}></PopupPostCode>
       </div>
     </div>
   );
